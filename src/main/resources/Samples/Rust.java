@@ -16,7 +16,9 @@ public class Rust {
     }
 
     static void fun2() {
-        System.out.println("fun2");
+        Path lib = Paths.get("/home/tardis3/ScriptPrototype/src/main/resources/libs/lib2/target/debug/liblib2.so");
+        System.load(lib.toString());
+        System.out.println(lib2());
     }
 
     static void fun3() {
@@ -24,4 +26,5 @@ public class Rust {
     }
 
     private static native String lib1();
+    private static native String lib2();
 }
