@@ -7,11 +7,11 @@ def print_cyan(str):
 workdir = os.path.expanduser('~/ScriptPrototype')
 
 os.chdir(workdir)
-print_cyan("create libs in resources")
+print_cyan("Create libs in resources")
 os.chdir("src/main/resources/libs")
 for folder in os.listdir("./"):
     os.chdir(folder)
-    print_cyan("build '" + folder + "' lib")
+    print_cyan("Build '" + folder + "' lib")
     os.system("cargo build")
     os.chdir("../")
 
