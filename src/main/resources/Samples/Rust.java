@@ -1,15 +1,20 @@
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Rust {
-    public static void main(String[] args) {
-        fun1();
-        fun2();
-        fun3();
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+        Method[] methods = Rust.class.getDeclaredMethods();
+        for (Method method: methods) {
+            if (method.getName().startsWith("fun")){
+                method.invoke(null);
+            }
+        }
     }
 
     final private static Path libs = Paths.get(System.getProperty("user.home")
-        + "/ScriptPrototype/src/main/resources/libs/");
+            + "/ScriptPrototype/src/main/resources/libs/");
 
     static void fun1(){
         final Path lib = libs.resolve("lib1/target/debug/liblib1.so");
