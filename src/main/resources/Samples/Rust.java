@@ -29,9 +29,12 @@ public class Rust {
     }
 
     static void fun3() {
-        System.out.println("fun3");
+        final Path lib = libs.resolve("lib3/target/debug/liblib3.so");
+        System.load(lib.toString());
+        System.out.println(lib3());
     }
 
     private static native String lib1();
     private static native String lib2();
+    private static native String lib3();
 }
