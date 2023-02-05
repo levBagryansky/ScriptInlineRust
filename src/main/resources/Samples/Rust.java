@@ -21,20 +21,19 @@ public class Rust {
         System.load(lib.toString());
         System.out.println(lib1());
     }
+    private static native String lib1();
 
     static void fun2() {
         final Path lib = libs.resolve("lib2/target/debug/liblib2.so");
         System.load(lib.toString());
         System.out.println(lib2());
     }
+    private static native String lib2();
 
     static void fun3() {
         final Path lib = libs.resolve("lib3/target/debug/liblib3.so");
         System.load(lib.toString());
         System.out.println(lib3());
     }
-
-    private static native String lib1();
-    private static native String lib2();
     private static native String lib3();
 }
