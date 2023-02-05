@@ -4,16 +4,18 @@ import java.nio.file.Files;
 public class Generate {
     public static void main(String[] args) throws IOException {
         JavaFile rust = new JavaFile();
-        rust.AddLib("lib1");
-        rust.AddLib("lib2");
-        rust.AddLib("lib3");
+        for (File file: new File(HOME + "/src/main/resources/libs")
+                .listFiles()) {
+           rust.AddLib(file.getName());
+        }
     }
 
+    final static String HOME = System.getProperty("user.home") + "/ScriptPrototype";
     public static class JavaFile extends File {
         public JavaFile() throws IOException {
             super("./Rust.java");
 
-            File sample = new File("/home/tardis3/ScriptPrototype/src/main/resources/Samples/EmptyForm.txt");
+            File sample = new File( HOME + "/src/main/resources/Samples/EmptyForm.txt");
             FileReader reader = new FileReader(sample);
             char[] content = new char[(int) sample.length()];
             reader.read(content);
