@@ -33,6 +33,7 @@ As soon as you have added a new library, in the generated file `Rust.java` there
 ...
 ```
 So starting `script.py` again you get:
+
 ![img.png](src/main/resources/img2.png)
 
 Now it also call the new lib!
