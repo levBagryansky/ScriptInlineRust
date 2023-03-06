@@ -36,4 +36,4 @@ So starting `script.py` again you get:
 
 ![img2.png](src/main/resources/output2.png)
 
-Now it also call the new lib!
+Now it also calls the new lib!
