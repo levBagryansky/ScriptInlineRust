@@ -4,7 +4,7 @@
 ### The task is to generate the `Rust.java` class with all native methods and call every of them in runtime.
 
 ### Running
-Run script.py to run the program from the project directory:
+Run `script.py` to run the program from the project directory:
 ```
 $ python3 script.py
 ```
@@ -16,11 +16,11 @@ Briefly the script compile rust libs from `src/resources/libs`, generates `Rust.
 Name of the libs start with "lib" and consist of letters and numbers.
 
 ### Adding a lib
-You can add a new lib in resources running like
+You can add a new lib in resources running dedicated script in `tools` like:
 ```
 $ python3 ./tools/add_lib.py lib4
 ```
-As soon as you have added a new library, in the generated file "Rust.java" there will be a new method to run it.
+As soon as you have added a new library, in the generated file `Rust.java` there will be a new method to run it.
 ```
 //Rust.java
 ...
@@ -32,7 +32,7 @@ As soon as you have added a new library, in the generated file "Rust.java" there
     private static native String lib2();
 ...
 ```
-So starting `script.py` again you get
+So starting `script.py` again you get:
 ![img.png](src/main/resources/img2.png)
 
-Now it also call new lib!
+Now it also call the new lib!
