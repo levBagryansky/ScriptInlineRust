@@ -10,7 +10,7 @@ $ python3 script.py
 ```
 The output of the program will be something like this:
 
-![img.png](src/main/resources/img1.png)
+![img.png](src/main/resources/output1.png)
 
 Briefly the script compile rust libs from `src/resources/libs`, generates `Rust.java` according to libs in resources, compile it and start `Rust.class` from `build`. 
 Name of the libs start with "lib" and consist of letters and numbers.
@@ -34,6 +34,6 @@ As soon as you have added a new library, in the generated file `Rust.java` there
 ```
 So starting `script.py` again you get:
 
-![img.png](src/main/resources/img2.png)
+![img2.png](src/main/resources/output2.png)
 
 Now it also call the new lib!
