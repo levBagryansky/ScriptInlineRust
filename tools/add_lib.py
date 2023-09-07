@@ -6,7 +6,7 @@ def print_cyan(str):
   print(colored(str, "cyan"))
 
 if len(sys.argv) != 2:
-  print_cyan("One argument <name> is required. <name> must be start by  'lib'")
+  print_cyan("One argument <name> is required. <name> must be start by  'lib'.")
   quit()
 
 name = sys.argv[1]
